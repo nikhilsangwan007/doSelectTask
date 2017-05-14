@@ -1,0 +1,12 @@
+{
+	"name" : "data-dashboard",
+	"version" : "1.0.0",
+	"dependencies" : {
+		"angular" : "latest",
+		"angular-material" : "latest",
+		"angular-animate" : "lateest",
+		"angular-aria" : "latest",
+		"angular-messages" : "latest",
+		"angular-route" : "latest"
+	}
+}
