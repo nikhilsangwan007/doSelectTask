@@ -28,8 +28,18 @@
 				md-component-id="leftSidenav"
 				md-is-locked-open="$mdMedia('gt-xs')"
 				md-whiteframe="4">
-				<md-content layout-padding>
-					<h2>Filters</h2>
+				<md-content layout="column" layout-padding>
+					<div flex>
+						<span class="md-title">Filter colleges...</span>
+					</div>
+					<div flex>
+						<md-checkbox aria-label="checkbox" ng-click="null" flex>ALL</md-checkbox>
+					</div>
+					<ul flex>
+						<li ng-repeat="item in items">
+							<md-checkbox aria-label="checkbox" ng-click="null">{{item}}</md-checkbox>
+						</li>
+					</ul>
 				</md-content>
 			</md-sidenav>
 		<div flex layout-padding>
