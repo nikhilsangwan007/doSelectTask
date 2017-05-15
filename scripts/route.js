@@ -6,16 +6,13 @@
 
 			$routeProvider
 				.when('/dashboard', {
-					templateUrl : '../templates/dashboard.html',
+					templateUrl : '../../templates/dashboard.html',
 					controller : 'dashboardCtrl'
 				})
 				.otherwise({
 					redirectTo : '/dashboard'
 				});
 
-			$locationProvider.html5Mode({
-				enabled : true,
-				requireBase : false
-			});
+			$locationProvider.html5Mode(false);
 		});
 })();

@@ -3,7 +3,7 @@
 
 	angular.module('indexCtrl', [])
 		.controller('indexCtrl', function($scope, $mdSidenav) {
-
+			console.log('index controller...')
 			$scope.openSidenav = function() {
 				$mdSidenav('leftSidenav')
 					.toggle()
