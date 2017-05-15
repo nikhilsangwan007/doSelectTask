@@ -1,0 +1,272 @@
+[
+	{
+		"collegeName" : "Jaypee Institute of Information Technology",
+		"candidates" : [
+			{
+				"Name" : "Nikhil",
+				"stream" : "CSE",
+				"GPA" : 6.1,
+				"score" : 80,
+				"techs" : ["angular", "react"]
+			},
+			{
+				"Name" : "Himanshu",
+				"stream" : "CSE",
+				"GPA" : 6.2,
+				"score" : 85,
+				"techs" : ["angular", "react", "node"]
+			},
+			{
+				"Name" : "Vishal",
+				"stream" : "CSE",
+				"GPA" : 6.4,
+				"score" : 30,
+				"techs" : ["php", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "Delhi Technology University",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "IIT Delhi",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "ECE",
+				"GPA" : 6.1,
+				"score" : 80,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "BITS Pilani",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "NIIT Delhi",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "NSIT",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "IIT Kanpur",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "Sardha University",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "AMITY College",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	},
+	{
+		"collegeName" : "IIT Madras",
+		"candidates" : [
+			{
+				"Name" : "Karan",
+				"stream" : "chemical",
+				"GPA" : 6.1,
+				"score" : 60,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Bhupinder",
+				"stream" : "CSE",
+				"GPA" : 7.2,
+				"score" : 65,
+				"techs" : ["node", "python", "HTML"]
+			},
+			{
+				"Name" : "Sumit",
+				"stream" : "CSE",
+				"GPA" : 7.1,
+				"score" : 50,
+				"techs" : ["HTML", "node"]
+			}
+		]
+
+	}
+]

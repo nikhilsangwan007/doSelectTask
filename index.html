@@ -2,14 +2,41 @@
 <html>
 <head>
 	<title>Dashboard</title>
+
+	<!-- META TAG FOR MAKING WEPPAGE RESPONSIVE FOR MOBILE DEVICES -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <base href="/"> -->
 
 	<!-- bower links -->
 	<link rel="stylesheet" type="text/css" href="./bower_components/angular-material/angular-material.min.css">
-</head>
-<body ng-app="app" ng-cloak>
 
-	<h2 ng-view>Loading...</h2>
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+</head>
+<body ng-app="app" ng-cloak layout="column" layout-fill ng-controller="indexCtrl">
+
+	<md-toolbar class="md-tall">
+		<div layout="row" class="md-toolbar-tools">
+			<div flex="13">
+				<ng-md-icon ng-click="openSidenav()" icon="menu" style="fill: white" size="28" hide show-xs></ng-md-icon>
+				<span class="brand">Dashboard</span>
+			</div>
+		</div>
+	</md-toolbar>
+	<div layout="row" layout-fill>
+			<md-sidenav
+				class="md-sidenav-left sidenav"
+				md-component-id="leftSidenav"
+				md-is-locked-open="$mdMedia('gt-xs')"
+				md-whiteframe="4">
+				<md-content layout-padding>
+					<h2>Filters</h2>
+				</md-content>
+			</md-sidenav>
+		<div flex layout-padding>
+			<div ng-view>Loading...</div>
+		</div>
+	</div>
 
 	<!-- bower scripts -->
 	<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
@@ -19,9 +46,16 @@
 	<script type="text/javascript" src="./bower_components/angular-messages/angular-messages.min.js"></script>
 	<script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
 
+	<!-- cdnjs scripts-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
+
+
 	<!-- custom scripts -->
 	<script type="text/javascript" src="./scripts/main.js"></script>
 	<script type="text/javascript" src="./scripts/route.js"></script>
+	<script type="text/javascript" src="./scripts/theme.js"></script>
+	<script type="text/javascript" src="./scripts/controllers/indexCtrl.js"></script>
 	<script type="text/javascript" src="./scripts/controllers/dashboardCtrl.js"></script>
+	<script type="text/javascript" src="./scripts/services/recordService.js"></script>
 </body>
 </html>

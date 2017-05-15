@@ -1,0 +1,12 @@
+body {
+	height: initial !important;
+}
+
+.brand {
+	vertical-align: super;
+	color: white;
+	font-weight: bolder;
+}
+.sidenav{
+	width: 15em;
+}
