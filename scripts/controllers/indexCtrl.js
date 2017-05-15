@@ -3,6 +3,8 @@
 
 	angular.module('indexCtrl', [])
 		.controller('indexCtrl', function($scope, $mdSidenav) {
+
+			$scope.items = ['GPA', 'Test Score', 'Languages'];
 			console.log('index controller...')
 			$scope.openSidenav = function() {
 				$mdSidenav('leftSidenav')
