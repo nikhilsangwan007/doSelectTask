@@ -10,3 +10,15 @@ body {
 .sidenav{
 	width: 15em;
 }
+.sidenavTitle {
+	color: rebeccapurple;
+	font-weight: bold;
+}
+.collegeName {
+	color: rebeccapurple;
+	font-weight: bold;
+}
+.infoCards {
+	width: 95%;
+	margin: 1em auto;
+}

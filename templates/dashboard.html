@@ -1,10 +1,16 @@
 <section>
-	<md-card ng-repeat="(key, value) in info">
+	<md-card class="infoCards" ng-repeat="(key, value) in info">
 		<md-card-title>
 			<md-card-title-text>
-				<span class="md-title">{{value.collegeName}}</span>
+				<span class="md-title collegeName">{{value.collegeName}}</span>
 			</md-card-title-text>
 		</md-card-title>
-		<md-card-content></md-card-content>
+		<md-card-content layout="row" layout-xs="column">
+			<div flex>Average GPA &nbsp; : &nbsp; {{averageGPA(value.candidates) | limitTo : 5}}</div>
+			<div flex>Average Test Score &nbsp; : &nbsp; {{averageScore(value.candidates) | limitTo : 5}}</div>
+		</md-card-content>
+		<md-card-actions layout="row" layout-align="end center">
+			<md-button class="md-primary md-raised" ng-click="null">Details</md-button>
+		</md-card-actions>
 	</md-card>
 </section>
