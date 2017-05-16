@@ -18,5 +18,9 @@
 				console.log(item);
 			}
 
+			$scope.checked = function(item) {
+				console.log(item);
+			}
+
 		});
 })();

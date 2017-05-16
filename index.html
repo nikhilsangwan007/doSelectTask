@@ -14,34 +14,40 @@
 </head>
 <body ng-app="app" ng-cloak layout="column" layout-fill ng-controller="indexCtrl">
 
-	<md-toolbar class="md-tall">
-		<div layout="row" class="md-toolbar-tools">
-			<div flex="13">
-				<ng-md-icon ng-click="openSidenav()" icon="menu" style="fill: white" size="28" hide show-xs></ng-md-icon>
+	<md-toolbar class="md-primary md-tall">
+		<div layout="row" layout-xs="column" class="md-toolbar-tools toolbox">
+			<div flex>
+				<ng-md-icon ng-click="openSidenav()" class="menuIcon" icon="menu" style="fill: white" size="28" hide show-xs></ng-md-icon>
 				<span class="brand">Dashboard</span>
+			</div>
+			<div flex></div>
+			<div flex>
+				<md-input-container class="md-block searchContainer" flex-gt-sm>
+					<input type="search" name="search" ng-model="search" placeholder="Search">
+				</md-input-container>
 			</div>
 		</div>
 	</md-toolbar>
-	<div layout="row" layout-fill>
-			<md-sidenav
-				class="md-sidenav-left sidenav"
-				md-component-id="leftSidenav"
-				md-is-locked-open="$mdMedia('gt-xs')"
-				md-whiteframe="4">
-				<md-content layout="column" layout-padding>
-					<div flex>
-						<span class="md-title sidenavTitle">Filter colleges</span>
-					</div>
-					<div flex>
-						<md-checkbox aria-label="checkbox" ng-click="null" flex>ALL</md-checkbox>
-					</div>
-					<ul flex>
-						<li ng-repeat="item in items">
-							<md-checkbox aria-label="checkbox" ng-click="filter(item)">{{item}}</md-checkbox>
-						</li>
-					</ul>
-				</md-content>
-			</md-sidenav>
+	<div layout="row" flex>
+		<md-sidenav
+			class="md-sidenav-left sidenav"
+			md-component-id="leftSidenav"
+			md-is-locked-open="$mdMedia('gt-xs')"
+			md-whiteframe="4">
+			<md-content layout="column" layout-padding>
+				<div flex>
+					<span class="md-title sidenavTitle">Filter colleges</span>
+				</div>
+				<div flex>
+					<md-checkbox aria-label="allSelected" class="md-primary" ng-click="null" flex>ALL</md-checkbox>
+				</div>
+				<ul flex>
+					<li ng-repeat="item in items">
+						<md-checkbox aria-label="checkbox" class="md-primary" mg-checked="checked(item)" ng-click="filter(item)">{{item}}</md-checkbox>
+					</li>
+				</ul>
+			</md-content>
+		</md-sidenav>
 		<div flex layout-padding>
 			<div ng-view>Loading...</div>
 		</div>

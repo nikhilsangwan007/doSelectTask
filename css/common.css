@@ -2,13 +2,30 @@ body {
 	height: initial !important;
 }
 
+.toolbox {
+	margin: auto;
+}
+.searchContainer {
+	margin: auto;
+	width: 70%;
+}
+.searchContainer input {
+	border-bottom-color: white;
+	color: white;
+}
 .brand {
 	vertical-align: super;
 	color: white;
 	font-weight: bolder;
+	margin: auto;
 }
 .sidenav{
 	width: 15em;
+}
+.menuIcon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }
 .sidenavTitle {
 	color: rebeccapurple;

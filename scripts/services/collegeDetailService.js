@@ -5,7 +5,7 @@
 		.factory('collegeDetailService', function($http) {
 			return {
 				getDetails : function(data) {
-					console.log(data);
+					// console.log(data);
 						return $http.get('./data/records.json', {
 							params : {
 								collegeName : data.name
