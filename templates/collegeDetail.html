@@ -1,16 +1,23 @@
-<section>
-	<md-card class="infoCards" ng-repeat="(key, value) in info">
+<section layout="column" layout-fill>
+	<md-card class="infoCards">
 		<md-card-title>
 			<md-card-title-text>
-				<span class="md-title collegeName">{{value.collegeName}}</span>
+				<span class="md-title collegeName">{{collegeName}}</span>
 			</md-card-title-text>
 		</md-card-title>
-		<md-card-content layout="row" layout-xs="column">
+		<md-card-content layout="column" layout-xs="column">
+			<table>
+				<tr>
+					<td>Students</td>
+					<td>GPA</td>
+					<td>Test Score</td>
+				</tr>
+			</table>
 			<div flex>Average GPA &nbsp; : &nbsp; {{averageGPA(value.candidates) | limitTo : 5}}</div>
 			<div flex>Average Test Score &nbsp; : &nbsp; {{averageScore(value.candidates) | limitTo : 5}}</div>
 		</md-card-content>
 		<md-card-actions layout="row" layout-align="end center">
-			<md-button class="md-primary md-raised" ng-click="collegeDetails(value.collegeName)">Details</md-button>
+			<md-button class="md-primary md-raised" ng-click="dashboard()">Back</md-button>
 		</md-card-actions>
 	</md-card>
 </section>

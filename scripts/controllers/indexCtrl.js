@@ -14,5 +14,9 @@
 					})
 			}
 
+			$scope.filter = function(item) {
+				console.log(item);
+			}
+
 		});
 })();

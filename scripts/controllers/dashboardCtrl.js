@@ -2,7 +2,7 @@
 	'use-strict';
 
 	angular.module('dashboardCtrl', [])
-		.controller('dashboardCtrl', function($scope, recordService) {
+		.controller('dashboardCtrl', function($scope, $rootScope, $location, recordService) {
 			console.log('dashboard controller...');
 
 			recordService.getData()
@@ -29,6 +29,11 @@
 				}
 				// console.log(avg);
 				return sum/data.length;
+			}
+
+			$scope.collegeDetails = function(collegeName) {
+				console.log(collegeName);
+				$location.path('/details/' + collegeName);
 			}
 
 		});

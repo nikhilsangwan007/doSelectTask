@@ -37,7 +37,7 @@
 					</div>
 					<ul flex>
 						<li ng-repeat="item in items">
-							<md-checkbox aria-label="checkbox" ng-click="null">{{item}}</md-checkbox>
+							<md-checkbox aria-label="checkbox" ng-click="filter(item)">{{item}}</md-checkbox>
 						</li>
 					</ul>
 				</md-content>
@@ -65,6 +65,8 @@
 	<script type="text/javascript" src="./scripts/theme.js"></script>
 	<script type="text/javascript" src="./scripts/controllers/indexCtrl.js"></script>
 	<script type="text/javascript" src="./scripts/controllers/dashboardCtrl.js"></script>
+	<script type="text/javascript" src="./scripts/controllers/collegeDetailCtrl.js"></script>
 	<script type="text/javascript" src="./scripts/services/recordService.js"></script>
+	<script type="text/javascript" src="./scripts/services/collegeDetailService.js"></script>
 </body>
 </html>

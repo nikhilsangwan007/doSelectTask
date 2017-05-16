@@ -9,10 +9,17 @@
 					templateUrl : '../../templates/dashboard.html',
 					controller : 'dashboardCtrl'
 				})
+				.when('/details/:name', {
+					templateUrl : '../../templates/collegeDetail.html',
+					controller : 'collegeDetailCtrl'
+				})
 				.otherwise({
 					redirectTo : '/dashboard'
 				});
 
-			$locationProvider.html5Mode(false);
+			$locationProvider.html5Mode({
+				enabled : false,
+				requireBase : false
+			});
 		});
 })();
