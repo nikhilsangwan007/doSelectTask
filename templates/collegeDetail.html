@@ -2,19 +2,26 @@
 	<md-card class="infoCards">
 		<md-card-title>
 			<md-card-title-text>
-				<span class="md-title collegeName">{{collegeName}}</span>
+				<span class="md-title collegeName">{{info.collegeName}}</span>
 			</md-card-title-text>
 		</md-card-title>
 		<md-card-content layout="column" layout-xs="column">
 			<table>
 				<tr>
-					<td>Students</td>
-					<td>GPA</td>
-					<td>Test Score</td>
+					<th>Students</th>
+					<th>GPA</th>
+					<th>Test Score</th>
+					<th>Skills</th>
+				</tr>
+				<tr ng-repeat="(key, value) in info.candidates">
+					<td>{{value.Name}}</td>
+					<td>{{value.GPA}}</td>
+					<td>{{value.score}}</td>
+					<td>
+						<span ng-repeat="i in value.techs">{{i}} &nbsp;</span>
+					</td>
 				</tr>
 			</table>
-			<div flex>Average GPA &nbsp; : &nbsp; {{averageGPA(value.candidates) | limitTo : 5}}</div>
-			<div flex>Average Test Score &nbsp; : &nbsp; {{averageScore(value.candidates) | limitTo : 5}}</div>
 		</md-card-content>
 		<md-card-actions layout="row" layout-align="end center">
 			<md-button class="md-primary md-raised" ng-click="dashboard()">Back</md-button>

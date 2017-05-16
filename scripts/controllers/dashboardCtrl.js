@@ -12,8 +12,8 @@
 				}, function errorCallback(err) {
 					console.log('error occured', err);
 				});
-			
-			$scope.averageGPA = function(data) {
+
+			$rootScope.averageGPA = function(data) {
 				var sum = 0;
 				for (var i = 0; i < data.length; i++) {
 					sum += data[i].GPA;
@@ -31,9 +31,8 @@
 				return sum/data.length;
 			}
 
-			$scope.collegeDetails = function(collegeName) {
-				console.log(collegeName);
-				$location.path('/details/' + collegeName);
+			$scope.collegeDetails = function(id) {
+				$location.path('/details/' + id);
 			}
 
 		});

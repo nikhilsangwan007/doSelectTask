@@ -14,7 +14,7 @@
 </head>
 <body ng-app="app" ng-cloak layout="column" layout-fill ng-controller="indexCtrl">
 
-	<md-toolbar class="md-primary md-tall">
+	<md-toolbar class="md-primary md-tall toolbar" md-whiteframe="4dp">
 		<div layout="row" layout-xs="column" class="md-toolbar-tools toolbox">
 			<div flex>
 				<ng-md-icon ng-click="openSidenav()" class="menuIcon" icon="menu" style="fill: white" size="28" hide show-xs></ng-md-icon>
@@ -23,12 +23,13 @@
 			<div flex></div>
 			<div flex>
 				<md-input-container class="md-block searchContainer" flex-gt-sm>
-					<input type="search" name="search" ng-model="search" placeholder="Search">
+					<label>Search</label>
+					<input type="search" name="search" ng-model="search">
 				</md-input-container>
 			</div>
 		</div>
 	</md-toolbar>
-	<div layout="row" flex>
+	<div layout="row" class="contentContainer" flex>
 		<md-sidenav
 			class="md-sidenav-left sidenav"
 			md-component-id="leftSidenav"

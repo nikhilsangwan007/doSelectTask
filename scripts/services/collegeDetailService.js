@@ -8,7 +8,7 @@
 					// console.log(data);
 						return $http.get('./data/records.json', {
 							params : {
-								collegeName : data.name
+								id : data.id
 							}
 						})	
 				}

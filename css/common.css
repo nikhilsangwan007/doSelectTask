@@ -1,13 +1,39 @@
 body {
 	height: initial !important;
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
+.toolbar {
+	position: fixed;
+	z-index: 999;
+}
 .toolbox {
 	margin: auto;
 }
 .searchContainer {
+	color: white;
 	margin: auto;
 	width: 70%;
+}
+.searchContainer label {
+	color: white;
 }
 .searchContainer input {
 	border-bottom-color: white;
@@ -18,6 +44,10 @@ body {
 	color: white;
 	font-weight: bolder;
 	margin: auto;
+}
+.contentContainer {
+	position: relative;
+	top: 128px;
 }
 .sidenav{
 	width: 15em;

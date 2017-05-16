@@ -9,7 +9,7 @@
 					templateUrl : '../../templates/dashboard.html',
 					controller : 'dashboardCtrl'
 				})
-				.when('/details/:name', {
+				.when('/details/:id', {
 					templateUrl : '../../templates/collegeDetail.html',
 					controller : 'collegeDetailCtrl'
 				})

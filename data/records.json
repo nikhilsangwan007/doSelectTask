@@ -1,5 +1,6 @@
 [
 	{
+		"id" : 0,
 		"collegeName" : "Jaypee Institute of Information Technology",
 		"candidates" : [
 			{
@@ -27,6 +28,7 @@
 
 	},
 	{
+		"id" : 1,
 		"collegeName" : "Delhi Technology University",
 		"candidates" : [
 			{
@@ -54,6 +56,7 @@
 
 	},
 	{
+		"id" : 2,
 		"collegeName" : "IIT Delhi",
 		"candidates" : [
 			{
@@ -64,16 +67,16 @@
 				"techs" : ["HTML", "CSS"]
 			},
 			{
-				"Name" : "Bhupinder",
+				"Name" : "Harsh",
 				"stream" : "CSE",
 				"GPA" : 7.2,
 				"score" : 65,
 				"techs" : ["node", "python", "HTML"]
 			},
 			{
-				"Name" : "Sumit",
-				"stream" : "CSE",
-				"GPA" : 7.1,
+				"Name" : "Robin",
+				"stream" : "IT",
+				"GPA" : 8.1,
 				"score" : 50,
 				"techs" : ["HTML", "node"]
 			}
@@ -81,6 +84,7 @@
 
 	},
 	{
+		"id" : 3,
 		"collegeName" : "BITS Pilani",
 		"candidates" : [
 			{
@@ -103,11 +107,26 @@
 				"GPA" : 7.1,
 				"score" : 50,
 				"techs" : ["HTML", "node"]
+			},
+			{
+				"Name" : "sachin",
+				"stream" : "ECE",
+				"GPA" : 6.1,
+				"score" : 55,
+				"techs" : ["HTML", "CSS"]
+			},
+			{
+				"Name" : "Rajat",
+				"stream" : "CSE",
+				"GPA" : 6.9,
+				"score" : 56,
+				"techs" : ["HTML", "Python"]
 			}
 		]
 
 	},
 	{
+		"id" : 4,
 		"collegeName" : "NIIT Delhi",
 		"candidates" : [
 			{
@@ -135,6 +154,7 @@
 
 	},
 	{
+		"id" : 5,
 		"collegeName" : "NSIT",
 		"candidates" : [
 			{
@@ -162,6 +182,7 @@
 
 	},
 	{
+		"id" : 6,
 		"collegeName" : "IIT Kanpur",
 		"candidates" : [
 			{
@@ -189,6 +210,7 @@
 
 	},
 	{
+		"id" : 7,
 		"collegeName" : "Sardha University",
 		"candidates" : [
 			{
@@ -216,6 +238,7 @@
 
 	},
 	{
+		"id" : 8,
 		"collegeName" : "AMITY College",
 		"candidates" : [
 			{
@@ -243,6 +266,7 @@
 
 	},
 	{
+		"id" : 9,
 		"collegeName" : "IIT Madras",
 		"candidates" : [
 			{
