@@ -2,10 +2,14 @@
 	'use-strict';
 
 	angular.module('indexCtrl', [])
-		.controller('indexCtrl', function($scope, $mdSidenav) {
+		.controller('indexCtrl', function($scope, $mdSidenav, $rootScope, $filter) {
 
-			$scope.items = ['GPA', 'Test Score', 'Languages'];
-			console.log('index controller...')
+			console.log('index controller...');
+
+			$scope.data = {};
+			$scope.data.gpa = false;
+			$scope.data.score = false;
+
 			$scope.openSidenav = function() {
 				$mdSidenav('leftSidenav')
 					.toggle()
@@ -20,6 +24,22 @@
 
 			$scope.checked = function(item) {
 				console.log(item);
+			}
+
+			$scope.gpaFilter = function () {
+				if (!$scope.data.gpa) {
+					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
+				}else {
+					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgScore');
+				}
+			}
+
+			$scope.scoreFilter = function () {
+				if (!$scope.data.score) {
+					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgScore');
+				} else {
+					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
+				}
 			}
 
 		});

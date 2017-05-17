@@ -40,13 +40,19 @@
 					<span class="md-title sidenavTitle">Filter colleges</span>
 				</div>
 				<div flex>
-					<md-checkbox aria-label="allSelected" class="md-primary" ng-click="null" flex>ALL</md-checkbox>
+					<md-checkbox aria-label="allSelected" ng-model="data.gpa" class="md-primary" ng-click="gpaFilter()" flex>Basis of GPA</md-checkbox>
+					<md-checkbox aria-label="allSelected" ng-model="data.score" class="md-primary" ng-click="scoreFilter()" flex>Basis of Score</md-checkbox>
 				</div>
-				<ul flex>
-					<li ng-repeat="item in items">
-						<md-checkbox aria-label="checkbox" class="md-primary" mg-checked="checked(item)" ng-click="filter(item)">{{item}}</md-checkbox>
-					</li>
-				</ul>
+				<div flex>
+					<md-list>
+					  	<md-list-item class="md-3-line" ng-repeat="item in ['Colleges consider', ' Colleges drop']" ng-click="null">
+							<!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
+							<div class="md-list-item-text" layout="column">
+								<h3>{{ item }}</h3>
+							</div>
+				        </md-list-item>
+					</md-list>
+				</div>
 			</md-content>
 		</md-sidenav>
 		<div flex layout-padding>
