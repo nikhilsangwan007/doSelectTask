@@ -30,7 +30,7 @@
 				if (!$scope.data.gpa) {
 					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
 				}else {
-					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgScore');
+					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-id');
 				}
 			}
 
@@ -38,7 +38,10 @@
 				if (!$scope.data.score) {
 					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgScore');
 				} else {
-					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
+					if ($scope.data.gpa) {
+						$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
+					}else
+						$rootScope.info.college = $filter('orderBy')($rootScope.info.college, 'id');
 				}
 			}
 
