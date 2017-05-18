@@ -4,7 +4,7 @@
 	angular.module('indexCtrl', [])
 		.controller('indexCtrl', function($scope, $mdSidenav, $rootScope, $filter) {
 
-			console.log('index controller...');
+			console.log('index controller running...');
 
 			$scope.data = {};
 			$scope.data.gpa = false;
@@ -28,21 +28,28 @@
 
 			$scope.gpaFilter = function () {
 				if (!$scope.data.gpa) {
-					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
+					$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgGPA');
 				}else {
-					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-id');
+					if ($scope.data.score) {
+						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgScore');
+					}else
+						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, 'id');
 				}
+				$mdSidenav('leftSidenav')
+					.toggle();
 			}
 
 			$scope.scoreFilter = function () {
 				if (!$scope.data.score) {
-					$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgScore');
+					$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgScore');
 				} else {
 					if ($scope.data.gpa) {
-						$rootScope.info.college = $filter('orderBy')($rootScope.info.college, '-avgGPA');
+						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgGPA');
 					}else
-						$rootScope.info.college = $filter('orderBy')($rootScope.info.college, 'id');
+						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, 'id');
 				}
+				$mdSidenav('leftSidenav')
+					.toggle();
 			}
 
 		});

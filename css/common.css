@@ -20,10 +20,6 @@ tr:nth-child(even) {
 	display: none;
 }
 
-.toolbar {
-	position: fixed;
-	z-index: 999;
-}
 .toolbox {
 	margin: auto;
 }
@@ -44,10 +40,6 @@ tr:nth-child(even) {
 	color: white;
 	font-weight: bolder;
 	margin: auto;
-}
-.contentContainer {
-	position: relative;
-	top: 128px;
 }
 .sidenav{
 	width: 15em;

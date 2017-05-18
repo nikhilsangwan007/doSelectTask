@@ -1,13 +1,13 @@
 <section>
-	<md-card class="infoCards" ng-repeat="(key, value) in info.college | filter : search">
+	<md-card class="infoCards" ng-repeat="(key, value) in finalData | filter : search">
 		<md-card-title>
 			<md-card-title-text>
 				<span class="md-title collegeName">{{value.collegeName}}</span>
 			</md-card-title-text>
 		</md-card-title>
 		<md-card-content layout="row" layout-xs="column">
-			<div flex>Average GPA &nbsp; : &nbsp; {{averageGPA(value.candidates) | limitTo : 5}}</div>
-			<div flex>Average Test Score &nbsp; : &nbsp; {{averageScore(value.candidates) | limitTo : 5}}</div>
+			<div flex>Average GPA &nbsp; : &nbsp; {{value.avgGPA | limitTo : 5}}</div>
+			<div flex>Average Test Score &nbsp; : &nbsp; {{value.avgScore | limitTo : 5}}</div>
 		</md-card-content>
 		<md-card-actions layout="row" layout-align="end center">
 			<md-button class="md-primary md-raised" ng-click="collegeDetails(value.id)">Details</md-button>

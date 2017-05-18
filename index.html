@@ -35,9 +35,12 @@
 			md-component-id="leftSidenav"
 			md-is-locked-open="$mdMedia('gt-xs')"
 			md-whiteframe="4">
+			<md-toolbar hide show-xs class="md-tall md-primary">	
+				<h3 layout-padding>Dashboard Menu</h3>
+			</md-toolbar>
 			<md-content layout="column" layout-padding>
 				<div flex>
-					<span class="md-title sidenavTitle">Filter colleges</span>
+					<span class="md-title sidenavTitle">Sort colleges</span>
 				</div>
 				<div flex>
 					<md-checkbox aria-label="allSelected" ng-model="data.gpa" class="md-primary" ng-click="gpaFilter()" flex>Basis of GPA</md-checkbox>
@@ -73,6 +76,5 @@
 	<script type="text/javascript" src="./scripts/controllers/dashboardCtrl.js"></script>
 	<script type="text/javascript" src="./scripts/controllers/collegeDetailCtrl.js"></script>
 	<script type="text/javascript" src="./scripts/services/recordService.js"></script>
-	<script type="text/javascript" src="./scripts/services/collegeDetailService.js"></script>
 </body>
 </html>
