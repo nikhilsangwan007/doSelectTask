@@ -13,6 +13,10 @@
 					templateUrl : '../../templates/collegeDetail.html',
 					controller : 'collegeDetailCtrl'
 				})
+				.when('/hiring', {
+					templateUrl : '../../templates/hireCollege.html',
+					controller : 'hireCollegeCtrl'
+				})
 				.otherwise({
 					redirectTo : '/dashboard'
 				});

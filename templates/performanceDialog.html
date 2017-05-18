@@ -1,0 +1,25 @@
+<md-dialog aria-label="performance" class="performanceDialog">
+	<md-toolbar class="md-primary">
+		<div class="md-toolbar-tools">
+			<span class="md-title">Top to bottom scorer</span>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="close()" aria-label="close dialog">
+				<ng-md-icon icon="close" style="fill: white" size="16"></ng-md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<md-content layout-padding>
+		<md-card ng-repeat="(key, value) in students | orderBy : '-score'">
+			<div layout="row" layout-align="center center">
+				<img ng-src="" class="studentImg">
+			</div>
+			<div layout="row" layout-align="center center">
+				<span class="md-title collegeName">{{value.Name}}</span>
+			</div>
+			<md-card-content layout="row" layout-xs="column" layout-padding>
+				<div flex layout-margin><strong>GPA</strong> &nbsp; : &nbsp; {{value.GPA | limitTo : 5}}</div>
+				<div flex layout-margin><strong>Test Score</strong> &nbsp; : &nbsp; {{value.score | limitTo : 5}}</div>
+			</md-card-content>
+		</md-card>
+	</md-content>
+</md-dialog>

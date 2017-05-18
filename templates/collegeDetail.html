@@ -9,12 +9,14 @@
 			<table>
 				<tr>
 					<th>Students</th>
+					<th>Branch</th>
 					<th>GPA</th>
 					<th>Test Score</th>
 					<th>Skills</th>
 				</tr>
 				<tr ng-repeat="(key, value) in info.candidates">
 					<td>{{value.Name}}</td>
+					<td>{{value.stream}}</td>
 					<td>{{value.GPA}}</td>
 					<td>{{value.score}}</td>
 					<td>
@@ -22,6 +24,10 @@
 					</td>
 				</tr>
 			</table>
+			<div layout="row" layout-xs="column" layout-padding>
+				<span flex><strong>Average GPA :</strong> &nbsp; {{info.avgGPA}}</span>
+				<span flex><strong>Average GPA :</strong> &nbsp; {{info.avgScore}}</span>
+			</div>
 		</md-card-content>
 		<md-card-actions layout="row" layout-align="end center">
 			<md-button class="md-primary md-raised" ng-click="dashboard()">Back</md-button>

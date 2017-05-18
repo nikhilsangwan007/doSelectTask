@@ -1,0 +1,44 @@
+<section layout-padding>
+	<md-tabs md-dynamic-height md-align-tabs="center center">
+		<md-tab label="Select Next">
+			<span class="md-display-1">Colleges should consider for next hiring season</span>
+			<md-content layout="row" flex layout-wrap>
+        		<md-card ng-repeat="(key, value) in finalData | orderBy : '-avgGPA' | limitTo : 6 | filter : search" class="collegeCard" id="{{key}}">
+        			<img src="" class="collegeImg">
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-title collegeName">{{value.collegeName}}</span>
+						</md-card-title-text>
+					</md-card-title>
+					<md-card-content layout="column" layout-xs="column" layout-padding>
+						<div flex layout-margin><strong>Average GPA</strong> &nbsp; : &nbsp; {{value.avgGPA | limitTo : 5}}</div>
+						<div flex layout-margin><strong>Average Test Score</strong> &nbsp; : &nbsp; {{value.avgScore | limitTo : 5}}</div>
+					</md-card-content>
+					<md-card-actions layout="row" layout-align="end center">
+						<md-button class="md-primary md-raised" ng-click="bestPerformers(value)">Best Scorers</md-button>
+					</md-card-actions>
+				</md-card>
+        	</md-content>
+		</md-tab>
+		<md-tab label="Drop Next">
+			<span class="md-display-1">Colleges should drop for next hiring season</span>
+			<md-content layout="row" flex layout-wrap>
+				<md-card ng-repeat="(key, value) in finalData | orderBy : 'avgGPA' | limitTo : 4 | filter : search" class="collegeCard" id="{{key}}">
+        			<img src="" class="collegeImg">
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-title collegeName">{{value.collegeName}}</span>
+						</md-card-title-text>
+					</md-card-title>
+					<md-card-content layout="column" layout-xs="column" layout-padding>
+						<div flex layout-margin><strong>Average GPA</strong> &nbsp; : &nbsp; {{value.avgGPA | limitTo : 5}}</div>
+						<div flex layout-margin><strong>Average Test Score</strong> &nbsp; : &nbsp; {{value.avgScore | limitTo : 5}}</div>
+					</md-card-content>
+					<md-card-actions layout="row" layout-align="end center">
+						<md-button class="md-primary md-raised" ng-click="bestPerformers(value)">Best Scorers</md-button>
+					</md-card-actions>
+				</md-card>
+			</md-content>
+		</md-tab>
+	</md-tabs>
+</section>

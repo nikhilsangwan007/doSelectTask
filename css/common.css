@@ -5,6 +5,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    padding: 0px;
 }
 
 td, th {
@@ -58,6 +59,27 @@ tr:nth-child(even) {
 	font-weight: bold;
 }
 .infoCards {
-	width: 95%;
+	width: 100%;
 	margin: 1em auto;
+}
+
+.collegeCard {
+	width: 300px;
+	height: 400px;
+	margin: 1em auto;
+}
+.collegeImg {
+	background-color: rebeccapurple;
+	height: 200px;
+}
+
+.performanceDialog {
+	width: 70%;
+	height: 95%;
+}
+.studentImg {
+	height: 50px;
+    width: 50px;
+    background-color: purple;
+    border-radius: 999px;
 }

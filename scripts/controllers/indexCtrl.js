@@ -2,7 +2,7 @@
 	'use-strict';
 
 	angular.module('indexCtrl', [])
-		.controller('indexCtrl', function($scope, $mdSidenav, $rootScope, $filter) {
+		.controller('indexCtrl', function($scope, $location, $mdSidenav, $rootScope, $filter) {
 
 			console.log('index controller running...');
 
@@ -18,12 +18,8 @@
 					})
 			}
 
-			$scope.filter = function(item) {
-				console.log(item);
-			}
-
-			$scope.checked = function(item) {
-				console.log(item);
+			$scope.hireCollege = function() {
+				$location.path('/hiring');
 			}
 
 			$scope.gpaFilter = function () {
