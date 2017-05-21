@@ -83,3 +83,9 @@ tr:nth-child(even) {
     background-color: purple;
     border-radius: 999px;
 }
+
+.spinner {
+	min-width: 40px;
+	min-height: 40px;
+	border-radius: 999px;
+}

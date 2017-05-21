@@ -2,9 +2,16 @@
 	'use-strict';
 
 	angular.module('indexCtrl', [])
-		.controller('indexCtrl', function($scope, $location, $mdSidenav, $rootScope, $filter) {
+		.controller('indexCtrl', function($scope, $location, $mdSidenav, $rootScope, $filter, $mdDialog) {
 
 			console.log('index controller running...');
+
+			$scope.loaded = false;
+			$mdDialog
+				.show({
+				clickOutsideToClose:false,
+				templateUrl: '../../templates/spinnerDialog.html'
+				});
 
 			$scope.data = {
 				group : 'gpa'

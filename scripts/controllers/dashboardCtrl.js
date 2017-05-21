@@ -2,7 +2,7 @@
 	'use-strict';
 
 	angular.module('dashboardCtrl', [])
-		.controller('dashboardCtrl', function($scope, $rootScope, $location, $filter, recordService) {
+		.controller('dashboardCtrl', function($scope, $rootScope, $location, $filter, $mdDialog, $timeout, recordService) {
 			console.log('dashboard controller running...');
 
 			$rootScope.info = {};
@@ -55,7 +55,11 @@
 				}, function errorCallback(err) {
 					console.log('error occured', err);
 				}).finally(function() {
-				})
+					$timeout(function() {	
+						$scope.loaded = true;
+						$mdDialog.hide('.spinner');
+					}, 1000);
+				});
 
 			$scope.collegeDetails = function(id) {
 				$location.path('/details/' + id);
