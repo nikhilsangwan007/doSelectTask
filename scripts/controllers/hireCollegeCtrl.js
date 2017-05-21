@@ -13,7 +13,6 @@
 					controller : performanceCtrl,
 					templateUrl : '../../templates/performanceDialog.html',
 					parent: angular.element(document.body),
-			      	// targetEvent: ev,
 			      	clickOutsideToClose:true,
 			      	fullscreen: $scope.customFullscreen
 				})
@@ -25,7 +24,6 @@
 			function performanceCtrl($scope, $mdDialog, data) {
 				
 				$scope.students = data.candidates;
-				console.log(data.candidates);
 
 				$scope.close = function() {
 					$mdDialog.cancel();

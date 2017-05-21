@@ -18,7 +18,7 @@
 		<div layout="row" layout-xs="column" class="md-toolbar-tools toolbox">
 			<div flex>
 				<ng-md-icon ng-click="openSidenav()" class="menuIcon" icon="menu" style="fill: white" size="28" hide show-xs></ng-md-icon>
-				<span class="brand"><a href="#/dashboard">Dashboard</a></span>
+				<span class="brand"><a href="/dashboard">Dashboard</a></span>
 			</div>
 			<div flex></div>
 			<div flex>
@@ -43,8 +43,11 @@
 					<span class="md-title sidenavTitle">Sort colleges</span>
 				</div>
 				<div flex>
-					<md-checkbox aria-label="allSelected" ng-model="data.gpa" class="md-primary" ng-click="gpaFilter()" flex>Basis of GPA</md-checkbox>
-					<md-checkbox aria-label="allSelected" ng-model="data.score" class="md-primary" ng-click="scoreFilter()" flex>Basis of Score</md-checkbox>
+					<md-radio-group>
+						<md-radio-button value="gpa" class="md-primary" ng-click="gpaFilter()">Basis of GPA</md-radio-button>
+						<md-radio-button value="score" class="md-accent" ng-click="scoreFilter()">Basis of Score</md-radio-button>
+						<md-radio-button value="gpa+score" class="md-warn" ng-click="gpa_scoreFilter()">Basis of GPA + Score</md-radio-button>
+					</md-radio-group>
 				</div>
 				<div flex>
 					<md-list flex>

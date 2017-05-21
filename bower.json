@@ -4,7 +4,7 @@
 	"dependencies" : {
 		"angular" : "latest",
 		"angular-material" : "latest",
-		"angular-animate" : "lateest",
+		"angular-animate" : "latest",
 		"angular-aria" : "latest",
 		"angular-messages" : "latest",
 		"angular-route" : "latest"

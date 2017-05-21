@@ -6,9 +6,9 @@
 
 			console.log('index controller running...');
 
-			$scope.data = {};
-			$scope.data.gpa = false;
-			$scope.data.score = false;
+			$scope.data = {
+				group : 'gpa'
+			};
 
 			$scope.openSidenav = function() {
 				$mdSidenav('leftSidenav')
@@ -23,27 +23,19 @@
 			}
 
 			$scope.gpaFilter = function () {
-				if (!$scope.data.gpa) {
-					$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgGPA');
-				}else {
-					if ($scope.data.score) {
-						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgScore');
-					}else
-						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, 'id');
-				}
+				$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgGPA');
 				$mdSidenav('leftSidenav')
 					.toggle();
 			}
 
 			$scope.scoreFilter = function () {
-				if (!$scope.data.score) {
 					$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgScore');
-				} else {
-					if ($scope.data.gpa) {
-						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-avgGPA');
-					}else
-						$rootScope.finalData = $filter('orderBy')($rootScope.info.college, 'id');
-				}
+				$mdSidenav('leftSidenav')
+					.toggle();
+			}
+
+			$scope.gpa_scoreFilter = function () {
+					$rootScope.finalData = $filter('orderBy')($rootScope.info.college, '-gpa_scoreAvg');
 				$mdSidenav('leftSidenav')
 					.toggle();
 			}
