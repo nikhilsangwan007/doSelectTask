@@ -1,0 +1,29 @@
+{
+  "name": "thedashboard",
+  "version": "1.0.0",
+  "description": "data driven dashboard",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilsangwan007/theDashboard.git"
+  },
+  "author": "Nikhil Sangwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhilsangwan007/theDashboard/issues"
+  },
+  "homepage": "https://github.com/nikhilsangwan007/theDashboard#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "angular-messages": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0"
+  }
+}
